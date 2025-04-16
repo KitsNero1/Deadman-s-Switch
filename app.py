@@ -11,12 +11,12 @@ def get_kill_switch():
 @app.route("/killswitch/on", methods=["POST"])
 def turn_on():
     kill_switch["kill"] = True
-    return jsonify({"message": "Kill switch ON"})
+    return jsonify({"message": "데드맨 스위치 가동"})
 
 @app.route("/killswitch/off", methods=["POST"])
 def turn_off():
     kill_switch["kill"] = False
-    return jsonify({"message": "Kill switch OFF"})
+    return jsonify({"message": "데드맨 스위치 해제"})
 
 @app.route("/", methods=["GET"])
 def home():
